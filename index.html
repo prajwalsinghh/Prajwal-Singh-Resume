@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+  if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+  window.addEventListener('load', function() { window.scrollTo(0, 0); });
+</script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -24,7 +28,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links a:hover{color:var(--gold)}
 #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 4rem;max-width:1100px;margin:0 auto}
 .hero-tag{display:inline-block;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:0.5px solid var(--border);padding:0.35rem 1rem;border-radius:2px;margin-bottom:2.5rem}
-.hero-name{font-family:var(--serif);font-size:clamp(3.5rem,7vw,6.5rem);font-weight:500;line-height:1.05;color:#f0ead8;margin-bottom:1rem}
+.hero-name{font-family:var(--serif);font-size:clamp(3.5rem,7vw,6.5rem);font-weight:500;line-height:1.05;color:#f0ead8;margin-bottom:1rem;white-space:nowrap}
 .hero-name em{color:var(--gold);font-style:italic}
 .hero-tagline{font-size:1.05rem;color:var(--text-muted);max-width:520px;font-weight:300;margin-bottom:3rem;line-height:1.75}
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
@@ -111,6 +115,7 @@ footer{border-top:0.5px solid var(--border);padding:2rem 4rem;display:flex;justi
   .edu-card{grid-template-columns:1fr}
   .hero-grid{grid-template-columns:1fr}
   footer{flex-direction:column;gap:0.5rem;padding:1.5rem}
+  .hero-name{white-space:normal}
 }
 </style>
 </head>
@@ -129,7 +134,7 @@ footer{border-top:0.5px solid var(--border);padding:2rem 4rem;display:flex;justi
 
 <div id="hero">
   <span class="hero-tag">Contracts &amp; Legal-Tech Professional</span>
-  <h1 class="hero-name">Prajwal<br><em>Singh</em></h1>
+  <h1 class="hero-name"><em>Prajwal Singh</em></h1>
   <p class="hero-tagline">Bridging law and technology — specializing in Contract Lifecycle Management, AI-assisted contract automation, and legal-tech operations across enterprise platforms.</p>
   <div class="hero-cta">
     <a href="#experience" class="btn btn-primary">View Experience</a>
@@ -182,7 +187,7 @@ footer{border-top:0.5px solid var(--border);padding:2rem 4rem;display:flex;justi
         <div class="exp-company">OpenText · Bengaluru</div>
       </div>
       <div>
-        <div class="exp-title">Contracts Administrator</div>
+        <div class="exp-title">Associate Contracts Administrator</div>
         <ul class="exp-bullets">
           <li>Managed end-to-end CLM processes — contract creation, review, execution, storage, and retrieval — ensuring alignment with organizational policies and SLAs.</li>
           <li>Abstracted and digitized contracts from Salesforce CRM, CMS, and ELA/APJ SharePoint portals, contributing to centralized repository development.</li>
